@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">CardioScope Medical</string>
+    <string name="devices">Medical Devices</string>
+
+    <string name="bluetooth_permission_title">Bluetooth Permission Required</string>
+    <string name="bluetooth_permission_grant">Bluetooth access is required to connect to the stethoscope device. Please grant permission in the next dialog.</string>
+    <string name="bluetooth_permission_denied">Bluetooth permission was permanently denied. Please enable \"%s\" permission in App settings to connect to medical devices.</string>
+
+    <string name="location_permission_title">Location Permission Required</string>
+    <string name="location_permission_grant">Location permission is required for Bluetooth Low Energy device scanning (Android requirement). This app does not track your location. Please grant permission in the next dialog.</string>
+    <string name="location_permission_denied">Location permission is required for Bluetooth LE device scanning. Please enable it to connect to medical devices.</string>
+
+    <string name="pairing_request">PAIRING REQUESTED\n→ Complete pairing on your device, then reconnect</string>
+
+</resources>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/background_card"
+    android:padding="24dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="♥"
+            android:textSize="28sp"
+            android:textColor="@color/medical_red"
+            android:paddingEnd="12dp" />
+
+        <TextView
+            android:id="@+id/playback_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Audio Recording"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/medical_blue_dark" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/playback_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Heart Rate: -- BPM\nDuration: -- seconds"
+        android:textSize="14sp"
+        android:textColor="@color/text_secondary"
+        android:layout_marginBottom="24dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0E0E0"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Playback Controls -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#F5F5F5"
+        android:padding="16dp"
+        android:layout_marginBottom="20dp">
+
+        <ImageButton
+            android:id="@+id/play_pause_button"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@android:drawable/ic_media_play"
+            android:background="@drawable/circle_background"
+            android:backgroundTint="@color/medical_blue"
+            android:tint="@color/text_white"
+            android:contentDescription="Play/Pause"
+            android:elevation="4dp" />
+
+    </LinearLayout>
+
+    <!-- Analysis Range Selection -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Analysis Range (seconds)"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:layout_marginBottom="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From: "
+            android:textSize="14sp"
+            android:paddingEnd="8dp" />
+
+        <EditText
+            android:id="@+id/analysis_start_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="0"
+            android:inputType="numberDecimal"
+            android:textSize="14sp"
+            android:padding="8dp"
+            android:background="@android:drawable/editbox_background" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  To: "
+            android:textSize="14sp"
+            android:paddingStart="12dp"
+            android:paddingEnd="8dp" />
+
+        <EditText
+            android:id="@+id/analysis_end_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Full"
+            android:inputType="numberDecimal"
+            android:textSize="14sp"
+            android:padding="8dp"
+            android:background="@android:drawable/editbox_background" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Leave 'To' empty to analyze until the end"
+        android:textSize="12sp"
+        android:textColor="@color/text_hint"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Analysis Section -->
+    <TextView
+        android:id="@+id/analysis_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Analysis status"
+        android:textSize="12sp"
+        android:textColor="@color/text_secondary"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/analysis_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:indeterminate="true" />
+
+    <!-- Action Buttons -->
+    <Button
+        android:id="@+id/analyze_button"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Analyze Recording"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_white"
+        android:background="@color/medical_teal"
+        android:layout_marginBottom="12dp"
+        android:elevation="2dp" />
+
+    <Button
+        android:id="@+id/share_button"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Share Recording"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_white"
+        android:background="@color/medical_green"
+        android:layout_marginBottom="12dp"
+        android:elevation="2dp" />
+
+    <Button
+        android:id="@+id/close_button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Close"
+        android:textSize="15sp"
+        android:textColor="@color/text_secondary"
+        style="?android:attr/buttonBarButtonStyle" />
+
+</LinearLayout>
+
+</ScrollView>

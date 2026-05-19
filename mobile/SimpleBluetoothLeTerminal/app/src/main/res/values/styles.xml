@@ -1,0 +1,65 @@
+<resources>
+    <!-- Medical Professional Theme -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/background_primary</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+    </style>
+    
+    <!-- Medical Card Style -->
+    <style name="MedicalCard">
+        <item name="cardElevation">2dp</item>
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardBackgroundColor">@color/background_card</item>
+        <item name="contentPadding">16dp</item>
+    </style>
+    
+    <!-- Header Text Style -->
+    <style name="MedicalHeaderText">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/medical_blue_dark</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+    
+    <!-- Subheader Text Style -->
+    <style name="MedicalSubheaderText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+    
+    <!-- Body Text Style -->
+    <style name="MedicalBodyText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+    
+    <!-- Value Display Style -->
+    <style name="MedicalValueDisplay">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/medical_blue</item>
+    </style>
+    
+    <!-- Primary Button Style -->
+    <style name="MedicalButtonPrimary" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:background">@color/medical_blue</item>
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:paddingRight">24dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <!-- Secondary Button Style -->
+    <style name="MedicalButtonSecondary" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textColor">@color/medical_blue</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+</resources>

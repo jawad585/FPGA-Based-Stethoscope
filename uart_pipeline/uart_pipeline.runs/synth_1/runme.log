@@ -1,0 +1,523 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 11072 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 409.645 ; gain = 96.324
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:294]
+	Parameter CLK_FREQ bound to: 100000000 - type: integer 
+	Parameter BAUD_RATE bound to: 230400 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'uart_rx_core' [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:4]
+	Parameter CLK_FREQ bound to: 100000000 - type: integer 
+	Parameter BAUD_RATE bound to: 230400 - type: integer 
+	Parameter BAUD_TICK bound to: 434 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx_core' (1#1) [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:4]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx_core' [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:58]
+	Parameter CLK_FREQ bound to: 100000000 - type: integer 
+	Parameter BAUD_RATE bound to: 230400 - type: integer 
+	Parameter BAUD_TICK bound to: 434 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx_core' (2#1) [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:58]
+INFO: [Synth 8-6157] synthesizing module 'iir_filter' [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:101]
+	Parameter B0 bound to: 16'sb0000000000011110 
+	Parameter B1 bound to: 16'sb0000000000011110 
+	Parameter B2 bound to: 16'sb0000000000000000 
+	Parameter A1 bound to: 16'sb1111111111001110 
+	Parameter A2 bound to: 16'sb0000000000010100 
+	Parameter SCALE bound to: 16'sb0000000010000000 
+WARNING: [Synth 8-6014] Unused sequential element x2_reg was removed.  [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:123]
+INFO: [Synth 8-6155] done synthesizing module 'iir_filter' (3#1) [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:101]
+INFO: [Synth 8-6157] synthesizing module 'led_equalizer' [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:142]
+WARNING: [Synth 8-6014] Unused sequential element audio_temp_reg was removed.  [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:154]
+INFO: [Synth 8-6155] done synthesizing module 'led_equalizer' (4#1) [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:142]
+INFO: [Synth 8-6157] synthesizing module 'ms_tick_gen' [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:170]
+	Parameter CLK_FREQ bound to: 100000000 - type: integer 
+	Parameter MS_COUNT bound to: 100000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ms_tick_gen' (5#1) [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:170]
+INFO: [Synth 8-6157] synthesizing module 'heartbeat_detect' [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:199]
+	Parameter MA_SIZE bound to: 50 - type: integer 
+	Parameter THRESHOLD bound to: 16'sb0000000000101000 
+WARNING: [Synth 8-6014] Unused sequential element interval_reg was removed.  [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:232]
+INFO: [Synth 8-6155] done synthesizing module 'heartbeat_detect' (6#1) [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:199]
+INFO: [Synth 8-6157] synthesizing module 'seg7_display' [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:248]
+INFO: [Synth 8-6155] done synthesizing module 'seg7_display' (7#1) [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:248]
+INFO: [Synth 8-6155] done synthesizing module 'top' (8#1) [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:294]
+WARNING: [Synth 8-3331] design heartbeat_detect has unconnected port ms_tick
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 464.457 ; gain = 151.137
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 464.457 ; gain = 151.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 464.457 ; gain = 151.137
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/constrs_1/new/cons.xdc]
+WARNING: [Vivado 12-584] No ports matched 'switch'. [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/constrs_1/new/cons.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/constrs_1/new/cons.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dp'. [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/constrs_1/new/cons.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/constrs_1/new/cons.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/constrs_1/new/cons.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/constrs_1/new/cons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 818.695 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 818.695 ; gain = 505.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 818.695 ; gain = 505.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 818.695 ; gain = 505.375
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "rx_bit_cnt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tx_shift" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "tx_busy_r" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element x0_reg was removed.  [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:122]
+WARNING: [Synth 8-6014] Unused sequential element x1_reg was removed.  [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:123]
+WARNING: [Synth 8-6014] Unused sequential element y2_reg was removed.  [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:123]
+WARNING: [Synth 8-6014] Unused sequential element y1_reg was removed.  [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:123]
+INFO: [Synth 8-5546] ROM "ms_tick" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 818.695 ; gain = 505.375
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     17 Bit       Adders := 1     
+	   3 Input     17 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 3     
+	   5 Input     16 Bit       Adders := 2     
+	   3 Input     16 Bit       Adders := 2     
+	   2 Input     14 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 9     
+	               14 Bit    Registers := 2     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 3     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 7     
++---RAMs : 
+	              800 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 4     
+	   2 Input     14 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module uart_rx_core 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               14 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module uart_tx_core 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               14 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module iir_filter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   5 Input     16 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 5     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module led_equalizer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+Module ms_tick_gen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module heartbeat_detect 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     17 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   3 Input     16 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 3     
+	               10 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
++---RAMs : 
+	              800 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+Module seg7_display 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'y1_reg[15:0]' into 'y1_reg[15:0]' [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:123]
+INFO: [Synth 8-4471] merging register 'x0_reg[15:0]' into 'x0_reg[15:0]' [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:122]
+WARNING: [Synth 8-6014] Unused sequential element y1_reg was removed.  [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:123]
+WARNING: [Synth 8-6014] Unused sequential element x0_reg was removed.  [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:122]
+WARNING: [Synth 8-6014] Unused sequential element x0_reg was removed.  [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:122]
+WARNING: [Synth 8-6014] Unused sequential element x1_reg was removed.  [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:123]
+WARNING: [Synth 8-6014] Unused sequential element y2_reg was removed.  [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:123]
+WARNING: [Synth 8-6014] Unused sequential element y1_reg was removed.  [D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.srcs/sources_1/new/top.v:123]
+DSP Report: Generating DSP y07, operation Mode is: A''*(B:0x1e).
+DSP Report: register x0_reg is absorbed into DSP y07.
+DSP Report: register x1_reg is absorbed into DSP y07.
+DSP Report: operator y07 is absorbed into DSP y07.
+DSP Report: Generating DSP y06, operation Mode is: A2*(B:0x3ffce).
+DSP Report: register y1_reg is absorbed into DSP y06.
+DSP Report: operator y06 is absorbed into DSP y06.
+DSP Report: Generating DSP y05, operation Mode is: A''*(B:0x14).
+DSP Report: register y1_reg is absorbed into DSP y05.
+DSP Report: register y2_reg is absorbed into DSP y05.
+DSP Report: operator y05 is absorbed into DSP y05.
+DSP Report: Generating DSP y07, operation Mode is: A2*(B:0x1e).
+DSP Report: register x0_reg is absorbed into DSP y07.
+DSP Report: operator y07 is absorbed into DSP y07.
+INFO: [Synth 8-5546] ROM "u_rx/rx_bit_cnt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u_tx/tx_shift" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u_ms/ms_tick" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design heartbeat_detect has unconnected port ms_tick
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_tx/tx_shift_reg[9] )
+INFO: [Synth 8-3886] merging instance 'u_filter/y0_reg[8]' (FDRE) to 'u_filter/y0_reg[15]'
+INFO: [Synth 8-3886] merging instance 'u_filter/y0_reg[9]' (FDRE) to 'u_filter/y0_reg[15]'
+INFO: [Synth 8-3886] merging instance 'u_filter/y0_reg[10]' (FDRE) to 'u_filter/y0_reg[15]'
+INFO: [Synth 8-3886] merging instance 'u_filter/y0_reg[11]' (FDRE) to 'u_filter/y0_reg[15]'
+INFO: [Synth 8-3886] merging instance 'u_filter/y0_reg[12]' (FDRE) to 'u_filter/y0_reg[15]'
+INFO: [Synth 8-3886] merging instance 'u_filter/y0_reg[13]' (FDRE) to 'u_filter/y0_reg[15]'
+INFO: [Synth 8-3886] merging instance 'u_filter/y0_reg[14]' (FDRE) to 'u_filter/y0_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_led/led_reg[15] )
+WARNING: [Synth 8-3332] Sequential element (u_led/led_reg[15]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_tx/tx_shift_reg[9]) is unused and will be removed from module top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 818.695 ; gain = 505.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+------------------+-----------+----------------------+--------------------------------+
+|Module Name | RTL Object       | Inference | Size (Depth x Width) | Primitives                     | 
++------------+------------------+-----------+----------------------+--------------------------------+
+|top         | u_bpm/ma_buf_reg | Implied   | 64 x 16              | RAM16X1S x 32  RAM32X1S x 16   | 
++------------+------------------+-----------+----------------------+--------------------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|iir_filter  | A''*(B:0x1e)   | 16     | 6      | -      | -      | 22     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|iir_filter  | A2*(B:0x3ffce) | 16     | 7      | -      | -      | 23     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|iir_filter  | A''*(B:0x14)   | 16     | 6      | -      | -      | 22     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|iir_filter  | A2*(B:0x1e)    | 16     | 6      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 861.098 ; gain = 547.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:43 . Memory (MB): peak = 954.785 ; gain = 641.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++------------+------------------+-----------+----------------------+--------------------------------+
+|Module Name | RTL Object       | Inference | Size (Depth x Width) | Primitives                     | 
++------------+------------------+-----------+----------------------+--------------------------------+
+|top         | u_bpm/ma_buf_reg | Implied   | 64 x 16              | RAM16X1S x 32  RAM32X1S x 16   | 
++------------+------------------+-----------+----------------------+--------------------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:44 . Memory (MB): peak = 957.586 ; gain = 644.266
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:45 . Memory (MB): peak = 957.586 ; gain = 644.266
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:45 . Memory (MB): peak = 957.586 ; gain = 644.266
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:45 . Memory (MB): peak = 957.586 ; gain = 644.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:45 . Memory (MB): peak = 957.586 ; gain = 644.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:45 . Memory (MB): peak = 957.586 ; gain = 644.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:45 . Memory (MB): peak = 957.586 ; gain = 644.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     1|
+|2     |CARRY4    |   240|
+|3     |DSP48E1   |     2|
+|4     |DSP48E1_1 |     2|
+|5     |LUT1      |    98|
+|6     |LUT2      |   208|
+|7     |LUT3      |   426|
+|8     |LUT4      |   166|
+|9     |LUT5      |   123|
+|10    |LUT6      |   359|
+|11    |RAM16X1S  |    18|
+|12    |RAM32X1S  |     9|
+|13    |FDRE      |   229|
+|14    |FDSE      |    22|
+|15    |IBUF      |     2|
+|16    |OBUF      |    32|
++------+----------+------+
+
+Report Instance Areas: 
++------+-----------+-----------------+------+
+|      |Instance   |Module           |Cells |
++------+-----------+-----------------+------+
+|1     |top        |                 |  1937|
+|2     |  u_bpm    |heartbeat_detect |  1434|
+|3     |  u_filter |iir_filter       |   198|
+|4     |  u_led    |led_equalizer    |    35|
+|5     |  u_ms     |ms_tick_gen      |    65|
+|6     |  u_rx     |uart_rx_core     |    73|
+|7     |  u_seg    |seg7_display     |    34|
+|8     |  u_tx     |uart_tx_core     |    59|
++------+-----------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:45 . Memory (MB): peak = 957.586 ; gain = 644.266
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 13 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 957.586 ; gain = 290.027
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:46 . Memory (MB): peak = 957.586 ; gain = 644.266
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 273 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 27 instances were transformed.
+  RAM16X1S => RAM32X1S (RAMS32): 18 instances
+  RAM32X1S => RAM32X1S (RAMS32): 9 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+46 Infos, 19 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:49 . Memory (MB): peak = 957.586 ; gain = 657.316
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'D:/fypFPGA/mega/aftersix/one/uart_pipeline/uart_pipeline.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.045 . Memory (MB): peak = 957.586 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Apr  1 02:15:18 2026...

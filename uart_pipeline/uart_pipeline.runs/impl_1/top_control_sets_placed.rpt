@@ -1,0 +1,84 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Apr  1 02:16:31 2026
+| Host         : DESKTOP-6LFKJBB running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    18 |
+| Unused register locations in slices containing registers |    26 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      8 |            2 |
+|     12 |            1 |
+|    16+ |           15 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              52 |           12 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              32 |            4 |
+| Yes          | No                    | No                     |             294 |           51 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             124 |           25 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+--------------------------------------+--------------------------+------------------+----------------+
+|  Clock Signal  |             Enable Signal            |     Set/Reset Signal     | Slice Load Count | Bel Load Count |
++----------------+--------------------------------------+--------------------------+------------------+----------------+
+|  clk_IBUF_BUFG | u_rx/rx_bit_cnt[3]_i_1_n_0           | u_rx/rx_busy0            |                1 |              8 |
+|  clk_IBUF_BUFG | u_tx/tx_bit_cnt[3]_i_1_n_0           | u_filter/SS[0]           |                1 |              8 |
+|  clk_IBUF_BUFG | u_rx/rx_ready                        | u_bpm/ma_idx[5]_i_1_n_0  |                3 |             12 |
+|  clk_IBUF_BUFG | u_rx/rx_busy5_out                    |                          |                3 |             16 |
+|  clk_IBUF_BUFG | u_rx/rx_shift[7]_i_1_n_0             |                          |                2 |             16 |
+|  clk_IBUF_BUFG | u_tx/tx_shift[7]_i_1_n_0             |                          |                2 |             16 |
+|  clk_IBUF_BUFG | u_bpm/ma_buf_reg_0_15_0_0__0_i_1_n_0 |                          |                3 |             18 |
+|  clk_IBUF_BUFG | u_bpm/ma_buf_reg_0_15_0_0_i_1_n_0    |                          |                3 |             18 |
+|  clk_IBUF_BUFG | u_rx/ma_sum_reg[3]                   |                          |                3 |             18 |
+|  clk_IBUF_BUFG | u_bpm/bpm_int[9]_i_2_n_0             | u_bpm/bpm_int[9]_i_1_n_0 |               10 |             20 |
+|  clk_IBUF_BUFG | u_rx/rx_ready                        | u_rx/SR[0]               |                3 |             20 |
+|  clk_IBUF_BUFG | u_rx/rx_busy_reg_n_0                 | u_rx/rx_busy0            |                4 |             28 |
+|  clk_IBUF_BUFG | u_tx/tx_busy                         | u_filter/SS[0]           |                3 |             28 |
+|  clk_IBUF_BUFG |                                      | u_ms/ms_cnt[16]_i_1_n_0  |                4 |             32 |
+|  clk_IBUF_BUFG | u_ms/ms_tick                         |                          |                4 |             32 |
+|  clk_IBUF_BUFG |                                      |                          |               12 |             52 |
+|  clk_IBUF_BUFG | u_bpm/prev_peak                      |                          |               11 |             64 |
+|  clk_IBUF_BUFG | u_rx/rx_ready                        |                          |               29 |            150 |
++----------------+--------------------------------------+--------------------------+------------------+----------------+
+
+

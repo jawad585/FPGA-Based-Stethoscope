@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Sample Rate Settings -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔊 Audio Settings"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FPGA Sample Rate: 3500 Hz"
+            android:textSize="14sp"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Playback Sample Rate (Hz):"
+            android:textSize="14sp"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp" />
+
+        <AutoCompleteTextView
+            android:id="@+id/dialog_sample_rate_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:hint="Enter sample rate (e.g., 8000, 44100)"
+            android:completionThreshold="1"
+            android:paddingBottom="8dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Format: 8-bit to 16-bit PCM"
+            android:textSize="12sp"
+            android:textColor="#666666"
+            android:paddingBottom="8dp" />
+
+        <!-- Buffer Size -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Audio Buffer Size:"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/dialog_buffer_size_input"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="16384"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:imeOptions="actionDone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" bytes"
+                android:textSize="12sp"
+                android:paddingLeft="4dp" />
+        </LinearLayout>
+
+        <!-- Waveform Window Duration -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Waveform Window:"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/dialog_waveform_window_input"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:text="4.5"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:imeOptions="actionDone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" seconds"
+                android:textSize="12sp"
+                android:paddingLeft="4dp" />
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Heartbeat Detection Parameters -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="❤️ Heartbeat Detection Parameters"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="16dp" />
+
+        <!-- Moving Average Size -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Moving Avg Size:"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/dialog_ma_size_input"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="50"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:imeOptions="actionDone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" samples"
+                android:textSize="12sp"
+                android:paddingLeft="4dp" />
+        </LinearLayout>
+
+        <!-- Threshold -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Peak Threshold:"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/dialog_threshold_input"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="40"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:imeOptions="actionDone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" units"
+                android:textSize="12sp"
+                android:paddingLeft="4dp" />
+        </LinearLayout>
+
+        <!-- Min Interval -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Min Beat Interval:"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/dialog_min_interval_input"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:text="0.4"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:imeOptions="actionDone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" seconds"
+                android:textSize="12sp"
+                android:paddingLeft="4dp" />
+        </LinearLayout>
+
+        <!-- Help Text -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💡 Tip: Adjust these parameters to improve heartbeat detection accuracy for your specific use case."
+            android:textSize="12sp"
+            android:textColor="#666666"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp" />
+
+    </LinearLayout>
+
+</ScrollView>

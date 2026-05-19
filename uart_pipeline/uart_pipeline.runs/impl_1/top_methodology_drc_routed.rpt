@@ -1,0 +1,352 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Apr  1 02:17:14 2026
+| Host         : DESKTOP-6LFKJBB running 64-bit major release  (build 9200)
+| Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
+| Design       : top
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 63
++-----------+----------+-------------------------------+------------+
+| Rule      | Severity | Description                   | Violations |
++-----------+----------+-------------------------------+------------+
+| SYNTH-11  | Warning  | DSP output not registered     | 4          |
+| TIMING-16 | Warning  | Large setup violation         | 26         |
+| TIMING-18 | Warning  | Missing input or output delay | 33         |
++-----------+----------+-------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+SYNTH-11#1 Warning
+DSP output not registered  
+DSP instance u_filter/y05 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#2 Warning
+DSP output not registered  
+DSP instance u_filter/y06 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#3 Warning
+DSP output not registered  
+DSP instance u_filter/y07 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#4 Warning
+DSP output not registered  
+DSP instance u_filter/y07__0 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -11.282 ns between u_bpm/ma_sum_reg[7]/C (clocked by sys_clk_pin) and u_bpm/baseline_reg[2]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -11.365 ns between u_bpm/ma_sum_reg[7]/C (clocked by sys_clk_pin) and u_bpm/baseline_reg[3]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -11.517 ns between u_bpm/ma_sum_reg[7]/C (clocked by sys_clk_pin) and u_bpm/baseline_reg[1]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -11.687 ns between u_bpm/ma_sum_reg[7]/C (clocked by sys_clk_pin) and u_bpm/baseline_reg[9]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -11.696 ns between u_bpm/ma_sum_reg[7]/C (clocked by sys_clk_pin) and u_bpm/baseline_reg[6]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -11.699 ns between u_bpm/ma_sum_reg[7]/C (clocked by sys_clk_pin) and u_bpm/baseline_reg[4]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -11.712 ns between u_bpm/last_peak_reg[1]/C (clocked by sys_clk_pin) and u_bpm/bpm_int_reg[6]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -11.730 ns between u_bpm/ma_sum_reg[7]/C (clocked by sys_clk_pin) and u_bpm/baseline_reg[7]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -11.796 ns between u_bpm/ma_sum_reg[7]/C (clocked by sys_clk_pin) and u_bpm/baseline_reg[13]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -11.829 ns between u_bpm/ma_sum_reg[7]/C (clocked by sys_clk_pin) and u_bpm/baseline_reg[5]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -11.916 ns between u_bpm/ma_sum_reg[7]/C (clocked by sys_clk_pin) and u_bpm/baseline_reg[12]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -11.994 ns between u_bpm/ma_sum_reg[7]/C (clocked by sys_clk_pin) and u_bpm/baseline_reg[11]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -12.053 ns between u_bpm/ma_sum_reg[7]/C (clocked by sys_clk_pin) and u_bpm/baseline_reg[14]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -12.075 ns between u_bpm/ma_sum_reg[7]/C (clocked by sys_clk_pin) and u_bpm/baseline_reg[15]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -12.081 ns between u_bpm/ma_sum_reg[7]/C (clocked by sys_clk_pin) and u_bpm/baseline_reg[8]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -12.091 ns between u_bpm/ma_sum_reg[7]/C (clocked by sys_clk_pin) and u_bpm/baseline_reg[10]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -13.646 ns between u_bpm/last_peak_reg[1]/C (clocked by sys_clk_pin) and u_bpm/bpm_int_reg[5]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -15.737 ns between u_bpm/last_peak_reg[1]/C (clocked by sys_clk_pin) and u_bpm/bpm_int_reg[4]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#19 Warning
+Large setup violation  
+There is a large setup violation of -17.722 ns between u_bpm/last_peak_reg[1]/C (clocked by sys_clk_pin) and u_bpm/bpm_int_reg[3]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#20 Warning
+Large setup violation  
+There is a large setup violation of -19.838 ns between u_bpm/last_peak_reg[1]/C (clocked by sys_clk_pin) and u_bpm/bpm_int_reg[2]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#21 Warning
+Large setup violation  
+There is a large setup violation of -22.009 ns between u_bpm/last_peak_reg[1]/C (clocked by sys_clk_pin) and u_bpm/bpm_int_reg[1]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#22 Warning
+Large setup violation  
+There is a large setup violation of -24.016 ns between u_bpm/last_peak_reg[1]/C (clocked by sys_clk_pin) and u_bpm/bpm_int_reg[0]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#23 Warning
+Large setup violation  
+There is a large setup violation of -5.742 ns between u_bpm/last_peak_reg[1]/C (clocked by sys_clk_pin) and u_bpm/bpm_int_reg[9]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#24 Warning
+Large setup violation  
+There is a large setup violation of -7.720 ns between u_bpm/last_peak_reg[1]/C (clocked by sys_clk_pin) and u_bpm/bpm_int_reg[8]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#25 Warning
+Large setup violation  
+There is a large setup violation of -9.718 ns between u_bpm/last_peak_reg[1]/C (clocked by sys_clk_pin) and u_bpm/bpm_int_reg[7]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#26 Warning
+Large setup violation  
+There is a large setup violation of -9.881 ns between u_bpm/ma_sum_reg[7]/C (clocked by sys_clk_pin) and u_bpm/baseline_reg[0]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on uart_rx relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An output delay is missing on an[0] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An output delay is missing on an[1] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An output delay is missing on an[2] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An output delay is missing on an[3] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An output delay is missing on an[4] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An output delay is missing on an[5] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#8 Warning
+Missing input or output delay  
+An output delay is missing on an[6] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#9 Warning
+Missing input or output delay  
+An output delay is missing on an[7] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#10 Warning
+Missing input or output delay  
+An output delay is missing on led[0] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An output delay is missing on led[10] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#12 Warning
+Missing input or output delay  
+An output delay is missing on led[11] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#13 Warning
+Missing input or output delay  
+An output delay is missing on led[12] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#14 Warning
+Missing input or output delay  
+An output delay is missing on led[13] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#15 Warning
+Missing input or output delay  
+An output delay is missing on led[14] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#16 Warning
+Missing input or output delay  
+An output delay is missing on led[15] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#17 Warning
+Missing input or output delay  
+An output delay is missing on led[1] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#18 Warning
+Missing input or output delay  
+An output delay is missing on led[2] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#19 Warning
+Missing input or output delay  
+An output delay is missing on led[3] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#20 Warning
+Missing input or output delay  
+An output delay is missing on led[4] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#21 Warning
+Missing input or output delay  
+An output delay is missing on led[5] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#22 Warning
+Missing input or output delay  
+An output delay is missing on led[6] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#23 Warning
+Missing input or output delay  
+An output delay is missing on led[7] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#24 Warning
+Missing input or output delay  
+An output delay is missing on led[8] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#25 Warning
+Missing input or output delay  
+An output delay is missing on led[9] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#26 Warning
+Missing input or output delay  
+An output delay is missing on seg[0] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#27 Warning
+Missing input or output delay  
+An output delay is missing on seg[1] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#28 Warning
+Missing input or output delay  
+An output delay is missing on seg[2] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#29 Warning
+Missing input or output delay  
+An output delay is missing on seg[3] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#30 Warning
+Missing input or output delay  
+An output delay is missing on seg[4] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#31 Warning
+Missing input or output delay  
+An output delay is missing on seg[5] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#32 Warning
+Missing input or output delay  
+An output delay is missing on seg[6] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#33 Warning
+Missing input or output delay  
+An output delay is missing on uart_tx relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+

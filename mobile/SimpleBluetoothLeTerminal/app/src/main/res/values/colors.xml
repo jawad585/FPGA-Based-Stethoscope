@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Medical Professional Theme - Clean Clinical Colors -->
+    <color name="colorPrimary">#0277BD</color>
+    <color name="colorPrimaryDark">#01579B</color>
+    <color name="colorAccent">#00ACC1</color>
+    
+    <!-- Medical UI Colors -->
+    <color name="medical_blue">#0277BD</color>
+    <color name="medical_blue_dark">#01579B</color>
+    <color name="medical_teal">#00ACC1</color>
+    <color name="medical_green">#00897B</color>
+    <color name="medical_red">#D32F2F</color>
+    <color name="medical_orange">#F57C00</color>
+    
+    <!-- Background Colors -->
+    <color name="background_primary">#FAFAFA</color>
+    <color name="background_card">#FFFFFF</color>
+    <color name="background_elevated">#F5F5F5</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_hint">#9E9E9E</color>
+    <color name="text_white">#FFFFFF</color>
+    
+    <!-- Status Colors -->
+    <color name="status_success">#43A047</color>
+    <color name="status_warning">#FB8C00</color>
+    <color name="status_error">#E53935</color>
+    <color name="status_info">#039BE5</color>
+    
+    <!-- Heart Rate Colors -->
+    <color name="heart_normal">#43A047</color>
+    <color name="heart_elevated">#FB8C00</color>
+    <color name="heart_critical">#E53935</color>
+    
+    <!-- Chart Colors -->
+    <color name="chart_waveform">#0277BD</color>
+    <color name="chart_baseline">#B0BEC5</color>
+    <color name="chart_peak">#D32F2F</color>
+    
+    <!-- Legacy Terminal Colors -->
+    <color name="colorRecieveText">#00C853</color>
+    <color name="colorSendText">#2196F3</color>
+    <color name="colorStatusText">#FFC107</color>
+</resources>

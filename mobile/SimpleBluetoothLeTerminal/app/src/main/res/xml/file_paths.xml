@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <files-path name="recordings" path="recordings/" />
+    <files-path name="analysis_results" path="analysis_results/" />
+    <external-files-path name="external_recordings" path="recordings/" />
+    <cache-path name="cache" path="/" />
+</paths>
